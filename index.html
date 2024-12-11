@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Guessing Helper | Developed by cheeseytunaa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/static/styles/style.css">
+  <link rel="shortcut icon" href="/static/images/logo/vct-favicon.svg" type="image/x-icon">
+
+  <style>
+    #hero {
+      background: url("/static/assets/img/bg-2.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    #hero-box {
+      background: rgb(41, 41, 41, 0.7);
+      border-radius: 5px 30px 5px 30px;
+    }
+
+    #hero-img {
+      width: 70%;
+      height: 70%;
+      border-radius: 5px 30px 5px 30px;
+    }
+
+    body {
+      background-color: #353030;
+      color: white
+    }
+
+    section>div {
+      background-color: #FFF8F3;
+    }
+
+    section#info>div {
+      border-radius: 20px 20px 0 0;
+    }
+
+    section#ending>div {
+      border-radius: 0 0 20px 20px;
+    }
+  </style>
+</head>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="/static/images/logo/vct-logo.svg" alt="Valorant Champions Tour 2024" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-item-link-list">
+          <li class="nav-item">
+            <a id="navbar-item-home" class="nav-link" href="#"><b>HOME</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><b>TOURNAMENTS</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><b>STANDING</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><b>SCHEDULES</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><b>BRACKETS</b></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <div class="container-fluid">
+    <div class="position-absolute top-50 start-50 translate-middle">
+      <img src="/static/images/logo/vct-logo-black.svg" alt="">
+    </div>
+  </div> -->
+
+  <div class="container px-4 py-5 position-absolute top-50 start-50 translate-middle">
+    <div data-aos="fade-right" id="hero-box" class="p-5">
+      <div class="text-center">
+        <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Word Guessing Game "Helper"</h1>
+        <p class="lead text-white">"<i>If you're not cheating, you're not trying.</i>" - Eddie Guerrero</p>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="length" class="form-label">Length:</label>
+          <input type="number" min="0" inputmode="numeric" pattern="\d*" class="form-control" id="length">
+        </div>
+        <div class="col">
+          <label for="included-letters" class="form-label">Letters which are included:</label> <i class="bi bi-info-circle-fill" data-bs-toggle="tooltip" data-bs-title="The letters are separated by spaces/commas/dots/underscores"></i>
+          <input type="text" class="form-control" id="included-letters" placeholder="(separated by spaces/commas/dots/underscores)">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label for="length" class="form-label">Word patterns:</label>
+          <input type="text" class="form-control" id="word-patterns" placeholder="(if this field is provided, others will be neglected)">
+        </div>
+        <div class="col">
+          <label for="excluded-letters" class="form-label">Letters which are excluded:</label> <i class="bi bi-info-circle-fill" data-bs-toggle="tooltip" data-bs-title="The letters are separated by spaces/commas/dots/underscores"></i>
+          <input type="text" class="form-control" id="excluded-letters" placeholder="(separated by spaces/commas/dots/underscores)">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <button class="btn btn-primary d-inline-block" onclick="searchButtonClick()">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/static/scripts/script.js"></script>
+</body>
+
+</html>
